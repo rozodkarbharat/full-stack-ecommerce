@@ -1,0 +1,14 @@
+.button{
+    padding:5px 10px;
+    border-radius: 50%;
+    border: 0.5px solid gray;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: white;
+}
+.box{
+    display: flex;
+    gap:8px;
+    justify-content: right;
+    padding-right: 50px;
+}

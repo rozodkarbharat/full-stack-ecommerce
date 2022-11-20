@@ -1,0 +1,12 @@
+.loading_div {
+    width: 100%;
+    height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+.span {
+    text-decoration: underline;
+    color: rgb(74, 74, 219);
+}

@@ -1,0 +1,9 @@
+.main{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    background-color: rgb(0, 46, 37);
+    color: white;
+    padding: 20px 0px;
+    margin-top: 50px;
+}

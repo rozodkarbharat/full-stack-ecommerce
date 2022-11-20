@@ -1,0 +1,34 @@
+.product_box{
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin-top: 10px;
+    gap: 30px;
+    justify-content: space-around;
+}
+.img{
+    height: 50px;
+   max-width: 50px;
+}
+.cart_products{
+    width: 50%;
+}
+.name{
+    width: 50%;
+}
+.btn{
+    /* padding: 5px 10px; */
+        border-radius: 50%;
+        border: 0.5px solid gray;
+        font-size: 20px;
+        cursor: pointer;
+        background-color: white;
+        width: 35px;
+        height: 35px;
+}
+.quantity{
+display: flex;
+align-items: center;
+gap: 10px;
+}
