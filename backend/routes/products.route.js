@@ -1,9 +1,10 @@
 const express = require("express");
+const Authentication = require("../middleware/authenication");
 const productModel = require("../model/product.model");
 
 const ProductRoute = express.Router();
 
-ProductRoute.post("/create", async (req, res) => {
+ProductRoute.post("/create",Authentication, async (req, res) => {
   var { name, price, category, description, image, original_price } = req.body;
   const data = new productModel({
     name,
@@ -14,8 +15,6 @@ ProductRoute.post("/create", async (req, res) => {
     original_price,
   });
   await data.save();
-
-  console.log(data);
   res.send({ message: "Product Created Succefully" });
 });
 
