@@ -13,7 +13,10 @@ const Cart = () => {
     useEffect(() => {
         // console.log(token)
       axios
-        .post("http://localhost:5000/cart/get", {token})
+        .post("http://localhost:5000/cart/get", {
+          headers:{
+          token:"bearer "+token
+        }})
         .then((res) => res.data)
         .then((data) => {
             setdata(data)
@@ -23,9 +26,12 @@ const Cart = () => {
     function cartQuantity(e,change){
      axios
        .post("http://localhost:5000/cart/cartcount", {
-         token,
          ...e,
          quantity: e.quantity + change,
+       },{
+        headers:{
+          token:"bearer "+token
+        }
        })
        .then((res) => res.data)
        .then((data) => {

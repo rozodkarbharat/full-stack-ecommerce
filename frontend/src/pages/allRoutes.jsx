@@ -3,7 +3,6 @@ import { Route, Routes } from 'react-router-dom'
 import RequireAuth from '../HOC/RequireAuth'
 import Cart from './Cart'
 import Create from './Create'
-import Home from './Home'
 import Login from './Login'
 import NotFound from './NotFound'
 import Product from './product'
@@ -14,14 +13,6 @@ const Allroutes = () => {
   return (
     <div>
       <Routes>
-        <Route
-          path="/"
-          element={
-            <RequireAuth>
-              <Home />
-            </RequireAuth>
-          }
-        />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route
@@ -33,7 +24,7 @@ const Allroutes = () => {
           }
         />
         <Route
-          path="/products"
+          path="/"
           element={
             <RequireAuth>
               <Products />
