@@ -22,11 +22,26 @@ p{
     display: flex;
     background-image: url("../../public/cart.svg");
     background-repeat: no-repeat;
-    height: 50px;
-    width: 100px;
-    text-align: center;
-    text-align: left;
-    align-items: center;
-    /* padding-top: 30px; */
-    padding-left: 20px;
+  height: 50px;
+  width: 100px;
+  text-align: center;
+justify-content: center;  
+align-items: center;
+ /* border: 1px solid black; */
+ padding-bottom: 5px;
+  background-position: center;
+}
+
+
+@media (min-width: 481px) and (max-width:780px) {
+
+}
+
+@media (max-width:480px) {
+.navbar {
+  font-size: 15px;
+}
+.cart{
+  width: 50px;
+}
 }

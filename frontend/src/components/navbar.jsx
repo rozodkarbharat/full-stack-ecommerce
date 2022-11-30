@@ -6,7 +6,7 @@ import navbar from "../css/navbar.module.css"
 import { SignOut } from '../redux/user/action';
 const Navbar = () => {
   const { token } = useSelector((state) => state.authReducer.login);
-    const [cartcount, setcartcount] = useState(0);
+  const [cartcount, setcartcount] = useState();
     const navigate=useNavigate()
     const dispatch=useDispatch()
   function HandleLogout(){
@@ -24,14 +24,15 @@ const Navbar = () => {
          })
          .then((res) => res.data)
          .then((data) => {
-           setcartcount(data.length);
+           setcartcount(data.length)
          });
      }, []);
   return (
     <div className={navbar.navbar}>
-      {token ? <p onClick={HandleLogout}>Logout</p> : <p onClick={() => navigate("/login")}>Login</p>}
+      {/* <p onClick={() => navigate("/")}>Home</p> */}
+      <p onClick={() => navigate("/")}>Home</p>
       <p onClick={() => navigate("/create")}>Create</p>
-      <p onClick={() => navigate("/")}>Products</p>
+      {token ? <p onClick={HandleLogout}>Logout</p> : <p onClick={() => navigate("/login")}>Login</p>}  
       <div className={navbar.cart} onClick={() => navigate("/cart")}>{cartcount}</div>
     </div>
   );

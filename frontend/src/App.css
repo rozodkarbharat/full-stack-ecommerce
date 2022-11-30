@@ -15,6 +15,9 @@ button{
     animation: App-logo-spin infinite 20s linear;
   }
 }
+body{
+  background-color: rgb(241, 243, 246);
+}
 
 .App-header {
   background-color: #282c34;

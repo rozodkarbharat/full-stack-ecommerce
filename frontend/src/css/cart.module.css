@@ -13,9 +13,14 @@
 }
 .cart_products{
     width: 50%;
+    background-color: rgb(255, 255, 255);
 }
 .name{
     width: 50%;
+}
+.cart_div{
+    display: flex;
+   justify-content: space-between;
 }
 .btn{
     /* padding: 5px 10px; */

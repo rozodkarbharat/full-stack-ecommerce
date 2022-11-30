@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import CarouselComp from '../components/Carousel';
 import Footer from '../components/footer';
 import Navbar from '../components/navbar';
+import SmallCarousal from '../components/SmallCarousal';
+import Toast from '../components/Toast';
 import product from "../css/products.module.css"
 
 const Products = () => {
@@ -28,11 +30,17 @@ const navigate=useNavigate()
   return (
     <div>
       <Navbar />
-      <CarouselComp/>
+      <Toast />
+      <div className={product.large_car}>
+        <CarouselComp />
+      </div>
+      <div className={product.small_car}>
+        <SmallCarousal />
+      </div>
       <div className={product.main}>
         <div className={product.title_box}>
           <h2 className={product.title}>Mobiles </h2>
-          <p onClick={() => handleclick("mobile")}>Load more...</p>
+          <p onClick={() => handleclick("mobile")}>Show more...</p>
         </div>
 
         <div className={product.box}>
@@ -57,7 +65,7 @@ const navigate=useNavigate()
         </div>
         <div className={product.title_box}>
           <h2 className={product.title}>TV </h2>
-          <p onClick={() => handleclick("television")}>Load more...</p>
+          <p onClick={() => handleclick("television")}>Show more...</p>
         </div>
         <div className={product.box}>
           {tv &&
@@ -81,7 +89,7 @@ const navigate=useNavigate()
         </div>
         <div className={product.title_box}>
           <h2 className={product.title}>Tablet </h2>
-          <p onClick={() => handleclick("tablet")}>Load more...</p>
+          <p onClick={() => handleclick("tablet")}>Show more...</p>
         </div>
         <div className={product.box}>
           {tab &&
@@ -104,7 +112,7 @@ const navigate=useNavigate()
             })}
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

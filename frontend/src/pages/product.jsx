@@ -5,8 +5,10 @@ import { useParams } from 'react-router-dom';
 import Navbar from '../components/navbar';
 import product from "../css/product.module.css"
 import { MenuItem, Select } from '@mui/material';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import Footer from '../components/footer';
+import { AddtToCart } from '../redux/Cart/action';
+import Toast from '../components/Toast';
 
 const Product = () => {
     const [data, setdata] = useState([])
@@ -14,10 +16,10 @@ const Product = () => {
     const [totalPage, settotalPage] = useState(1)
     const [sort, setsort] = useState("")
    const { token } = useSelector((state) => state.authReducer.login);
+      const state = useSelector((state) => state.cartReducer);
      let { category } = useParams();
-     const [cart_message, setcart_message] = useState("")
+     const dispatch=useDispatch()
      
-
      useEffect(() => {
         var body={page,category}
         if(sort){
@@ -36,14 +38,18 @@ const Product = () => {
      function addToCart(data){
 
       axios
-        .post("http://localhost:5000/cart/", { ...data, token })
+        .post("http://localhost:5000/cart/", { ...data },{
+          headers:{
+            token:"bearer "+token
+          }
+        })
         .then((res) => res.data)
-        .then((data) => setcart_message(data));
+        .then((data) => dispatch(AddtToCart(data)));
      }
-// console.log(cart_message)
   return (
     <div>
       <Navbar />
+      <Toast  />
       <div className={product.sort_box}>
         <p>Sort by : </p>
         <select

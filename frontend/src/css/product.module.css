@@ -2,6 +2,7 @@
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     padding: 10px;
     border-radius: 5%;
+    background-color: rgb(255, 255, 255);
 }
 .original_price {
     text-decoration: line-through;
@@ -56,3 +57,14 @@
     color: gray;
 }
 
+@media (min-width: 481px) and (max-width:780px) {
+.box {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width:480px) {
+.box{
+    grid-template-columns: repeat(1,1fr);
+}
+}

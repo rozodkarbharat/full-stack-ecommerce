@@ -7,3 +7,24 @@
     padding: 20px 0px;
     margin-top: 50px;
 }
+.main div{
+    text-align: left;
+}
+
+@media (min-width: 481px) and (max-width:780px) {
+ 
+}
+
+@media (max-width:480px) {
+    .main{
+ display: grid;
+ grid-template-columns: repeat(2,1fr);
+    }
+        .main div{
+           text-align: center;
+        }
+        .main h3{
+             text-align: center;
+        }
+
+}

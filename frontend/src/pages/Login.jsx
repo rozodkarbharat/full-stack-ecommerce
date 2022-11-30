@@ -39,7 +39,7 @@ const Login=()=> {
     axios
       .post("http://localhost:5000/user/login", { username:email, password })
       .then((res) => dispatch(SigninSuccess(res.data)))
-      .then(() => navigate("/products"))
+      .then(() => navigate("/"))
       .catch((err) => dispatch(SigninError(true)));
     
   };

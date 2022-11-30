@@ -1,0 +1,16 @@
+.cart_total_div{
+    margin: auto;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 20px;
+    min-width: 25%;
+   background-color: rgb(255, 255, 255);
+}
+.item{
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+}
+h3{
+    text-align: left;
+    color: gray;
+}

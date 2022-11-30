@@ -57,6 +57,10 @@ const Create = () => {
         description,
         original_price,
         price,
+      },{
+        headers:{
+          token:"bearer "+token
+        }
       })
       .then((res) =>{ setloading(()=>false) 
         setcategory("")
