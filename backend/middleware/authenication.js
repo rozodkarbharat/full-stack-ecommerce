@@ -17,12 +17,12 @@ const Authentication = (req, res, next) => {
           req.body.username = logindata.username;
           next();
         } else {
-          res.send("Please login");
+          res.status(401).send("Please login");
         }
       }
     });
   } catch (err) {
-    res.send("server error");
+    res.status(500).send("server error");
   }
 };
 module.exports = Authentication;

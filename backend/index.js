@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(cors());
 app.use("/user", userRouter);
 app.use("/product",ProductRoute);
-app.use("/cart", cartRoute);
+app.use("/cart", cartRoute)
 
 app.get("/", (req, res) => {
   res.send("Welcome to homepage");
@@ -21,6 +21,12 @@ app.get("/", (req, res) => {
 
 
 app.listen(process.env.PORT, async () => {
-  await connection;
-  console.log("server running");
+  try{
+ await connection;
+ console.log("server running");
+  }
+  catch(err){
+  console.log(err)
+  }
+ 
 });
