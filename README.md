@@ -61,7 +61,7 @@ This ecommerce Website is an individual project where we can add new products an
 </p>
 <h2>Getting Started</h2>
 <div>
-<p>is project was built using React,Redux, Material UI, CSS, JavaScript,HTML. It is an online social media marketing management web application and for running on your local environment you should follow these guidelines</p>
+<p>is project was built using React,Redux, Material UI, CSS, JavaScript,HTML. An Ecommerce website for electronics buying and selling and for running on your local environment you should follow these guidelines</p>
 <h3>Prerequisites</h3>
 <ul>
 <li>React</li>
