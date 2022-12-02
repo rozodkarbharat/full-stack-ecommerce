@@ -20,7 +20,7 @@ http://ecom-electronics.netlify.app
 This ecommerce Website is an individual project where we can add new products and buy products.
 </p>
 <p align="center">
-<img src="https://user-images.githubusercontent.com/101388961/196045693-c845f580-6805-41c1-be41-8e05e3d53231.png" />
+<img src="https://github.com/rozodkarbharat/full-stack-ecommerce/blob/main/frontend/public/images/homepage.png" />
 <p>
 <h2> Screens </h2>
 <ul>
