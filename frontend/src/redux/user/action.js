@@ -25,6 +25,7 @@ import { LOGIN_ERROR, LOGIN_LOADING, LOGIN_SUCCESS, LOGOUT, SIGNUP_ERROR, SIGNUP
   };
 
   export const SigninError = (payload) => (dispatch) => {
+      console.log(payload, "error");
     dispatch({ type: LOGIN_ERROR,payload });
   };
 

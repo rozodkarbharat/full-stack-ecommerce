@@ -26,10 +26,10 @@ const Product = () => {
             body.sort=sort
         }
   axios
-    .post("http://localhost:5000/product/",body)
+    .post("https://ecommerce-electronics.onrender.com/product/", body)
     .then((res) => res.data)
     .then((data) => {
-        settotalPage(()=>+data.totalPages)
+      settotalPage(() => +data.totalPages);
       setdata(() => data.data);
     });
     setsort("")
@@ -38,11 +38,15 @@ const Product = () => {
      function addToCart(data){
 
       axios
-        .post("http://localhost:5000/cart/", { ...data },{
-          headers:{
-            token:"bearer "+token
+        .post(
+          "https://ecommerce-electronics.onrender.com/cart/",
+          { ...data },
+          {
+            headers: {
+              token: "bearer " + token,
+            },
           }
-        })
+        )
         .then((res) => res.data)
         .then((data) => dispatch(AddtToCart(data)));
      }

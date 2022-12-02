@@ -21,22 +21,22 @@ setamount(()=>count)
         <h3>PRICE DETAILS</h3>
 
       <div className={carttotal.item}>
-        <p>No. of Items: </p>
+        <p>No. of Items : </p>
         <p> {data.length}</p>
       </div>
       <div className={carttotal.item}>
-        <p>Discount: </p>
+        <p>Discount : </p>
         <p style={discount < 0 ? { color: "green" } : {}}> ₹ {discount}</p>
       </div>
       <div className={carttotal.item}>
-        <p>Delivery Charges: </p>
+        <p>Delivery Charges : </p>
         <p style={amount > 10000 ? { color: "green" } : {}}>
           {amount > 10000 ? "Free" : "50 Rs"}
         </p>
       </div>
       <hr />
       <div className={carttotal.item}>
-        <p>CartTotal: </p>
+        <p>Cart Total : </p>
         <p>₹ {amount}</p>
       </div>
     </div>

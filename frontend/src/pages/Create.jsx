@@ -50,29 +50,36 @@ const Create = () => {
     }
     setloading(() => true);
     axios
-      .post("http://localhost:5000/product/create", {
-        name,
-        image,
-        category,
-        description,
-        original_price,
-        price,
-      },{
-        headers:{
-          token:"bearer "+token
+      .post(
+        "https://ecommerce-electronics.onrender.com/product/create",
+        {
+          name,
+          image,
+          category,
+          description,
+          original_price,
+          price,
+        },
+        {
+          headers: {
+            token: "bearer " + token,
+          },
         }
+      )
+      .then((res) => {
+        setloading(() => false);
+        setcategory("");
+        setprice("");
+        setoriginal_price("");
+        setimage("");
+        setdescription("");
+        setname("");
+        window.alert("Product Created successfully");
       })
-      .then((res) =>{ setloading(()=>false) 
-        setcategory("")
-        setprice("")
-        setoriginal_price("")
-        setimage("")
-        setdescription("")
-        setname("")
-        window.alert("Product Created successfully")})
-      .catch((err) =>
-      { setloading(()=>false)
-       seterror(()=>true)});
+      .catch((err) => {
+        setloading(() => false);
+        seterror(() => true);
+      });
   };
   if(message){
      setTimeout(togglerror, 5000);

@@ -14,14 +14,17 @@ const [tv, settv] = useState([])
 const [tab, settab] = useState([])
 const navigate=useNavigate()
     useEffect(() => {
-       axios.get("http://localhost:5000/product/all").then((res)=>res.data).then((data)=>{
-        var tv_data=data.filter((elem)=>elem.category==="television")
-        var mobile_data = data.filter((elem) => elem.category === "mobile")
-        var tablet_data = data.filter((elem) => elem.category === "tablet");
-        setmobile(()=>mobile_data)
-        settv(()=>tv_data)
-        settab(()=>tablet_data)
-       })
+       axios
+         .get("https://ecommerce-electronics.onrender.com/product/all")
+         .then((res) => res.data)
+         .then((data) => {
+           var tv_data = data.filter((elem) => elem.category === "television");
+           var mobile_data = data.filter((elem) => elem.category === "mobile");
+           var tablet_data = data.filter((elem) => elem.category === "tablet");
+           setmobile(() => mobile_data);
+           settv(() => tv_data);
+           settab(() => tablet_data);
+         });
     }, [])
 
     function handleclick(type){

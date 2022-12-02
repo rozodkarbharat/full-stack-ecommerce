@@ -14,30 +14,34 @@ const Cart = () => {
     useEffect(() => {
         // console.log(token)
       axios
-        .get("http://localhost:5000/cart/get", {
-          headers:{
-            "Content-type":"appliocation/json",
-          token:"bearer "+token
-        }})
+        .get("https://ecommerce-electronics.onrender.com/cart/get", {
+          headers: {
+            "Content-type": "appliocation/json",
+            token: "bearer " + token,
+          },
+        })
         .then((res) => res.data)
         .then((data) => {
-            setdata(data)
-          
+          setdata(data);
         });
     }, [])
     function cartQuantity(e,change){
      axios
-       .post("http://localhost:5000/cart/cartcount", {
-         ...e,
-         quantity: e.quantity + change,
-       },{
-        headers:{
-          token:"bearer "+token
-        }
-       })
+       .post(
+         "https://ecommerce-electronics.onrender.com/cart/cartcount",
+         {
+           ...e,
+           quantity: e.quantity + change,
+         },
+         {
+           headers: {
+             token: "bearer " + token,
+           },
+         }
+       )
        .then((res) => res.data)
        .then((data) => {
-         setdata(data)
+         setdata(data);
        });
     }
   return (

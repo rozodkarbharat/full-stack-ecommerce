@@ -16,7 +16,7 @@ const Navbar = () => {
      useEffect(() => {
        // console.log(token)
        axios
-         .get("http://localhost:5000/cart/get", {
+         .get("https://ecommerce-electronics.onrender.com/cart/get", {
            headers: {
              "Content-type": "appliocation/json",
              token: "bearer " + token,
@@ -24,7 +24,7 @@ const Navbar = () => {
          })
          .then((res) => res.data)
          .then((data) => {
-           setcartcount(data.length)
+           setcartcount(data.length);
          });
      }, []);
   return (

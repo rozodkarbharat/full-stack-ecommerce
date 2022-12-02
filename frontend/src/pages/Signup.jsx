@@ -40,10 +40,15 @@ const dispatch=useDispatch()
     e.preventDefault()
   dispatch(SignupLoading())
      axios
-       .post("http://localhost:5000/user/signup", { name, password, username })
+       .post("https://ecommerce-electronics.onrender.com/user/signup", {
+         name,
+         password,
+         username,
+       })
        .then((res) => dispatch(SignupSuccess(res.data)))
        .then(() => {
-        navigate("/login")})
+         navigate("/login");
+       })
        .catch((err) => dispatch(SignupError(true)));
   };
 if (isError) {
@@ -139,7 +144,7 @@ return (
           </Box>
           <p>
             Already have an account? click to{" "}
-            <span className={Products.span} onClick={() => navigate("/signup")}>Login</span>
+            <span className={Products.span} onClick={() => navigate("/login")}>Login</span>
           </p>
         </Box>
       </Container>
