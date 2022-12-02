@@ -7,7 +7,7 @@ http://ecom-electronics.netlify.app
 </div>
 <h2>Tech stack used for the application</h2>
 <div>
-  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="reactjs" />
+  <img src="https://github.com/rozodkarbharat/full-stack-ecommerce/blob/main/frontend/public/images/responsive1.png" alt="reactjs" />
     <img src="https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white" alt="redux" />
     <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" alt="mongo" />
     <img src="https://img.shields.io/badge/Express.js-404D59?style=for-the-badge" alt="express" />
