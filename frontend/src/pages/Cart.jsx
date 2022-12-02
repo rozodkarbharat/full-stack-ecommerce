@@ -12,7 +12,7 @@ const Cart = () => {
      );
      const [data, setdata] = useState([])
     useEffect(() => {
-        // console.log(token)
+        console.log(token)
       axios
         .get("https://ecommerce-electronics.onrender.com/cart/get", {
           headers: {

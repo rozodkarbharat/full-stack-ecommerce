@@ -1,5 +1,6 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
+import HasAuth from '../HOC/HasAuth'
 import RequireAuth from '../HOC/RequireAuth'
 import Cart from './Cart'
 import Create from './Create'
@@ -22,8 +23,22 @@ const Allroutes = () => {
             </RequireAuth>
           }
         /> */}
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
+        <Route
+          path="/login"
+          element={
+            <HasAuth>
+              <Login />
+            </HasAuth>
+          }
+        />
+        <Route
+          path="/signup"
+          element={
+            <HasAuth>
+              <Signup />
+            </HasAuth>
+          }
+        />
         <Route
           path="/create"
           element={

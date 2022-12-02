@@ -14,7 +14,7 @@ const Navbar = () => {
   }
 
      useEffect(() => {
-       // console.log(token)
+     
        axios
          .get("https://ecommerce-electronics.onrender.com/cart/get", {
            headers: {
@@ -24,7 +24,8 @@ const Navbar = () => {
          })
          .then((res) => res.data)
          .then((data) => {
-           setcartcount(data.length);
+          if(typeof(data)!="string")
+           {setcartcount(data.length);}
          });
      }, []);
   return (
