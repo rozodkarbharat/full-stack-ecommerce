@@ -37,8 +37,8 @@ This ecommerce Website is an individual project where we can add new products an
 <ul>
 <li>Fully responsive</li>
 <li>Account login and logout functionality.</li>
+<li>Sign up</li>
 <li>Authentication </li>
-<li>Add a project datewise</li>
 <li>Add new product</li>
 <li>Filter and sort products</li>
 <li>Add to cart and cart calculations</li>
