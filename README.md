@@ -7,7 +7,7 @@ http://ecom-electronics.netlify.app
 </div>
 <h2>Tech stack used for the application</h2>
 <div>
-  <img src="https://github.com/rozodkarbharat/full-stack-ecommerce/blob/main/frontend/public/images/react.jpg" alt="reactjs" />
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="reactjs" />
     <img src="https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white" alt="redux" />
     <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" alt="mongo" />
     <img src="https://img.shields.io/badge/Express.js-404D59?style=for-the-badge" alt="express" />
@@ -37,8 +37,8 @@ This ecommerce Website is an individual project where we can add new products an
 <ul>
 <li>Fully responsive</li>
 <li>Account login and logout functionality.</li>
+<li>Sign up</li>
 <li>Authentication </li>
-<li>Add a project datewise</li>
 <li>Add new product</li>
 <li>Filter and sort products</li>
 <li>Add to cart and cart calculations</li>
@@ -46,18 +46,14 @@ This ecommerce Website is an individual project where we can add new products an
 </ul>
 <h2>Glimpses of website</h2>
 <p align="center">
-<img src="https://user-images.githubusercontent.com/101388961/196046180-528f160f-98e8-487f-bb61-b07503f55ed8.png"  width=400 />
-<img src="https://user-images.githubusercontent.com/101388961/196045726-0cd43b82-a98b-44e3-8381-6597ba484f40.png"  width=400 />
-<img src="https://user-images.githubusercontent.com/101388961/196045699-1bd08b05-b573-4973-8dc5-96c317f0037c.png" width=400 />
-<img src="https://user-images.githubusercontent.com/101388961/196045704-e6645949-a195-41a5-a11c-4fb42123de86.png" width=400  />
-<img src="https://user-images.githubusercontent.com/101388961/196045751-0b2fd2ac-fa27-4543-bd9c-8aedf195ec25.png"  width=400 />
-<img src="https://user-images.githubusercontent.com/101388961/196045761-700133a8-1e4d-4e19-ada4-2ca9a7c1faf8.png" width=400  />
-<img src="https://user-images.githubusercontent.com/101388961/196045767-dbb27eb2-6d7d-4a31-ac93-af334efb1607.png" width=400  />
-<img src="https://user-images.githubusercontent.com/101388961/196045783-d9d22ac4-1d0d-4fce-9c82-db3135e3544b.png"  width=400/>
-<img src="https://user-images.githubusercontent.com/101388961/196045775-4c2fc9d4-8017-4667-9a4f-16dbadc179fe.png"  width=400/>
-<img src="https://user-images.githubusercontent.com/101388961/196045791-a89ecabe-ec23-48d6-baea-f00c54a943a3.png"  width=400/>
-<img src="https://user-images.githubusercontent.com/101388961/196045808-35c8ba1a-c9a2-4070-8798-86bfa33bb23c.png"  width=400/>
-<img src="https://user-images.githubusercontent.com/101388961/196045811-a457eb0c-9af4-471b-ae3a-495b891b44f0.png"  width=400/>
+<img src="https://github.com/rozodkarbharat/full-stack-ecommerce/blob/main/frontend/public/images/responsive1.png"  width=400 />
+<img src="https://github.com/rozodkarbharat/full-stack-ecommerce/blob/main/frontend/public/images/responsive2.png"  width=400 />
+<img src="https://github.com/rozodkarbharat/full-stack-ecommerce/blob/main/frontend/public/images/responsive3.png" width=400 />
+<img src="https://github.com/rozodkarbharat/full-stack-ecommerce/blob/main/frontend/public/images/homepage.png" width=400  />
+<img src="https://github.com/rozodkarbharat/full-stack-ecommerce/blob/main/frontend/public/images/home2.png"  width=400 />
+<img src="https://github.com/rozodkarbharat/full-stack-ecommerce/blob/main/frontend/public/images/cartpage.png" width=400  />
+<img src="https://github.com/rozodkarbharat/full-stack-ecommerce/blob/main/frontend/public/images/signin.png" width=400  />
+<img src="https://github.com/rozodkarbharat/full-stack-ecommerce/blob/main/frontend/public/images/signup.png"  width=400/>
 </p>
 <h2>Getting Started</h2>
 <div>
