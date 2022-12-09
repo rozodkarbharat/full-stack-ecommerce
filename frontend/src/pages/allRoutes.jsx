@@ -1,15 +1,15 @@
-import React from 'react'
-import { Route, Routes } from 'react-router-dom'
-import HasAuth from '../HOC/HasAuth'
-import RequireAuth from '../HOC/RequireAuth'
-import Cart from './Cart'
-import Create from './Create'
-import Home from './Home'
-import Login from './Login'
-import NotFound from './NotFound'
-import Product from './product'
-import Products from './Products'
-import Signup from './Signup'
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import HasAuth from "../HOC/HasAuth";
+import RequireAuth from "../HOC/RequireAuth";
+import Cart from "./Cart";
+import Create from "./Create";
+import Home from "./Home";
+import Login from "./Login";
+import NotFound from "./NotFound";
+import Product from "./product";
+import Products from "./Products";
+import Signup from "./Signup";
 
 const Allroutes = () => {
   return (
@@ -47,14 +47,7 @@ const Allroutes = () => {
             </RequireAuth>
           }
         />
-        <Route
-          path="/"
-          element={
-            <RequireAuth>
-              <Products />
-            </RequireAuth>
-          }
-        />
+        <Route path="/" element={<Products />} />
         <Route
           path="/product/:category"
           element={
