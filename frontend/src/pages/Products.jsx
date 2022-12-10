@@ -14,10 +14,12 @@ const [tv, settv] = useState([])
 const [tab, settab] = useState([])
 const navigate=useNavigate()
     useEffect(() => {
+      console.log("hello")
        axios
          .get("https://ecommerce-electronics.onrender.com/product/all")
          .then((res) => res.data)
          .then((data) => {
+          console.log(data)
            var tv_data = data.filter((elem) => elem.category === "television");
            var mobile_data = data.filter((elem) => elem.category === "mobile");
            var tablet_data = data.filter((elem) => elem.category === "tablet");
