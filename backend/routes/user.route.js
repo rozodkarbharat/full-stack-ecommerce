@@ -11,7 +11,7 @@ userRouter.post("/signup", IsUserExist, (req, res) => {
   try {
     bcrypt.hash(password, 3, async function (err, hash) {
       if (err) {
-        res.status(500).send({error:"Please try again later"});
+        res.status(500).send({message:"Please try again later"});
       }
       const data = new userModel({ username, password: hash, name });
       await data.save();
@@ -26,7 +26,12 @@ userRouter.post("/login", async (req, res) => {
   try {
     var { username, password } = req.body;
     const Data = await userModel.findOne({ username });
+    if (!Data) {
+      res.status(200).send({message:"Invalid credentials",type:"wraning"})
+    }
+    else{
 
+    
     bcrypt.compare(password, Data.password, function (err, result) {
       if (result) {
         var token = jwt.sign({ username }, "secret");
@@ -37,9 +42,10 @@ userRouter.post("/login", async (req, res) => {
           username,
         });
       } else {
-        res.status(401).send({error:"Invalid credentials"});
+        res.status(200).send({message:"Invalid credentials",type:"wraning"});
       }
     });
+  }
   } catch (err) {
     res.status(500).send({error:"server Error"});
   }

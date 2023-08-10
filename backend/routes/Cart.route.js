@@ -1,5 +1,5 @@
 const express = require("express");
-const { decode } = require("jsonwebtoken"); 
+const { decode } = require("jsonwebtoken");
 const cartModel = require("../model/cart.model");
 const productModel = require("../model/product.model");
 var jwt = require("jsonwebtoken");
