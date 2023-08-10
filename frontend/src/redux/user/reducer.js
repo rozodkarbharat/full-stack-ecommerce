@@ -1,4 +1,4 @@
-import { LOGIN_ERROR, LOGIN_LOADING, LOGIN_SUCCESS, LOGOUT, SIGNUP_ERROR, SIGNUP_LOADING, SIGNUP_SUCCESS } from "./action.type"
+import { LOGIN_ERROR, LOGIN_FAILED, LOGIN_LOADING, LOGIN_SUCCESS, LOGOUT, SIGNUP_ERROR, SIGNUP_LOADING, SIGNUP_SUCCESS } from "./action.type"
 
 const initstate = {
   login: {
@@ -31,6 +31,9 @@ switch (action.type) {
         username,
       },
     };
+  }
+  case LOGIN_FAILED:{
+    return {...state,login: { isLoading: false, isError: false, isAuth: false, token: "" }}
   }
   case LOGIN_LOADING: {
     // console.log("loading");

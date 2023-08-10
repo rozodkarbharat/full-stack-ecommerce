@@ -1,5 +1,5 @@
 import axios from "axios";
-import { LOGIN_ERROR, LOGIN_LOADING, LOGIN_SUCCESS, LOGOUT, SIGNUP_ERROR, SIGNUP_LOADING, SIGNUP_SUCCESS } from "./action.type";
+import { LOGIN_ERROR, LOGIN_FAILED, LOGIN_LOADING, LOGIN_SUCCESS, LOGOUT, SIGNUP_ERROR, SIGNUP_LOADING, SIGNUP_SUCCESS } from "./action.type";
 
 
   export const SignupSuccess = (payload) => (dispatch) => {
@@ -23,6 +23,10 @@ import { LOGIN_ERROR, LOGIN_LOADING, LOGIN_SUCCESS, LOGOUT, SIGNUP_ERROR, SIGNUP
   export const SigninLoading = () => (dispatch) => {
     dispatch({ type: LOGIN_LOADING });
   };
+
+  export const loginfail=() => (dispatch) => {
+    dispatch({ type: LOGIN_FAILED });
+  }
 
   export const SigninError = (payload) => (dispatch) => {
       console.log(payload, "error");

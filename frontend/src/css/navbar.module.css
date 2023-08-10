@@ -1,6 +1,7 @@
 
 .navbar{
     width: 100%;
+    margin: auto;
     height: 50px;
     z-index: 1;
     position: sticky;
@@ -27,7 +28,6 @@ p{
   text-align: center;
 justify-content: center;  
 align-items: center;
- /* border: 1px solid black; */
  padding-bottom: 5px;
   background-position: center;
 }
