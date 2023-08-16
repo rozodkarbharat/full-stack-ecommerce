@@ -4,7 +4,7 @@ import carttotal from "../css/carttotal.module.css"
 const CartTotal = ({data}) => {
 const [amount, setamount] = useState(0)
 const [discount, setdiscount] = useState(0)
-console.log(data,"data")
+
 useEffect(() => {
 var count=data.reduce((acc,elem)=>{
     return acc+=+elem.price* +elem.quantity

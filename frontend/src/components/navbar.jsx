@@ -6,6 +6,8 @@ import navbar from "../css/navbar.module.css"
 import { SignOut } from '../redux/user/action';
 const Navbar = () => {
   const { token } = useSelector((state) => state.authReducer.login);
+  const {message}=useSelector((state) => state.cartReducer);
+
   const [cartcount, setcartcount] = useState();
     const navigate=useNavigate()
     const dispatch=useDispatch()
@@ -27,7 +29,7 @@ const Navbar = () => {
           if(typeof(data)!="string")
            {setcartcount(data.length);}
          });
-     }, []);
+     }, [message,token]);
   return (
     <div className={navbar.navbar}>
       {/* <p onClick={() => navigate("/")}>Home</p> */}

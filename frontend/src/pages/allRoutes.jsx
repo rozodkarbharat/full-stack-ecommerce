@@ -4,7 +4,6 @@ import HasAuth from "../HOC/HasAuth";
 import RequireAuth from "../HOC/RequireAuth";
 import Cart from "./Cart";
 import Create from "./Create";
-import Home from "./Home";
 import Login from "./Login";
 import NotFound from "./NotFound";
 import Product from "./product";
@@ -48,6 +47,7 @@ const Allroutes = () => {
           }
         />
         <Route path="/" element={<Products />} />
+        
         <Route
           path="/product/:category"
           element={
