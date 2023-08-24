@@ -9,6 +9,8 @@ import NotFound from "./NotFound";
 import Product from "./product";
 import Products from "./Products";
 import Signup from "./Signup";
+import CheckoutSuccess from "./CheckoutSuccess";
+import CheckoutError from "./CheckoutError";
 
 const Allroutes = () => {
   return (
@@ -61,6 +63,22 @@ const Allroutes = () => {
           element={
             <RequireAuth>
               <Cart />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/checkout-success"
+          element={
+            <RequireAuth>
+              <CheckoutSuccess />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/checkout-cancel"
+          element={
+            <RequireAuth>
+              <CheckoutError />
             </RequireAuth>
           }
         />

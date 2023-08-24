@@ -1,9 +1,24 @@
 import { color } from '@mui/system'
 import React, { useEffect, useState } from 'react'
 import carttotal from "../css/carttotal.module.css"
+import axios from 'axios'
 const CartTotal = ({data}) => {
 const [amount, setamount] = useState(0)
 const [discount, setdiscount] = useState(0)
+
+function handleCheckout() {
+
+  axios
+    .post("http://localhost:5000/payment/create-checkout-session", {
+      data
+    })
+    .then((res) => {
+      if (res.data?.url) {
+         window.location.href = res.data.url
+      }
+    })
+    .catch((err) => console.log(err.message));
+}
 
 useEffect(() => {
 var count=data.reduce((acc,elem)=>{
@@ -39,6 +54,7 @@ setamount(()=>count)
         <p>Cart Total : </p>
         <p>₹ {amount}</p>
       </div>
+      <button onClick={() => handleCheckout()} className={carttotal.checkoutBtn}>Check Out</button>
     </div>
   );
 }
