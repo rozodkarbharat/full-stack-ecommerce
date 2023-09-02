@@ -28,7 +28,7 @@ paymentRoute.post("/create-checkout-session", async (req, res) => {
     success_url: `${process.env.YOUR_DOMAIN}/checkout-success`,
     cancel_url: `${process.env.YOUR_DOMAIN}/checkout-cancel`,
   });
-
+    console.log(session)
   res.send({ url: session.url });
 });
 

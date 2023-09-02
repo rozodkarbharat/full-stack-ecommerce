@@ -14,6 +14,7 @@ function handleCheckout() {
     })
     .then((res) => {
       if (res.data?.url) {
+        console.log(res.data,"data")
          window.location.href = res.data.url
       }
     })
