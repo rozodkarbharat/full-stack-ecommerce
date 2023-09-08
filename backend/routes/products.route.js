@@ -1,8 +1,10 @@
 const express = require("express");
 const Authentication = require("../middleware/authenication");
 const productModel = require("../model/product.model");
+const NodeCache = require( "node-cache" );
 
 const ProductRoute = express.Router();
+const myCache = new NodeCache();
 
 ProductRoute.post("/create",Authentication, async (req, res) => {
   try{
@@ -24,8 +26,16 @@ catch(err){
 });
 
 ProductRoute.get("/all",async(req,res)=>{
+  // let start=Date.now()
+  // console.log(Date.now());
   try {
-    const data = await productModel.find();
+    let data = myCache.get( "products" );
+    if ( data == undefined ){    
+       data = await productModel.find();
+       myCache.set("products", data);
+      //  console.log(Date.now()-start,"cache miss");
+  }
+  // console.log(Date.now()-start,"after data");
     res.status(200).json(data);
   } catch (err) {
     res.status(500).send({ error: "Server error" });
